@@ -73,12 +73,28 @@ function App() {
 
   // JSON fetch
   useEffect(() => {
-    async function fetchWords() {
+    async function fetchRandomWord() {
       try {
-        const response = await fetch(process.env.PUBLIC_URL + "/words_data.json");
-        const jsonData = await response.json();
+        // 1️⃣ JSON 파일 리스트 가져오기
+        const resFiles = await fetch(process.env.PUBLIC_URL + "/words_jsons/file_list.json");
+        const files = await resFiles.json(); // file_list.json 안에 ["file1.json","file2.json", ...] 형태로 저장돼 있어야 함
+
+        if (!files || files.length === 0) {
+          console.error("words_jsons 폴더에 JSON 파일이 없습니다!");
+          setLoading(false);
+          return;
+        }
+
+        // 2️⃣ 랜덤 파일 선택
+        const randomFile = files[Math.floor(Math.random() * files.length)];
+
+        // 3️⃣ 선택한 JSON 파일에서 데이터 가져오기
+        const resData = await fetch(process.env.PUBLIC_URL + `/words_jsons/${randomFile}`);
+        const jsonData = await resData.json();
+
         setWords(jsonData);
 
+        // 옵션 설정 (기존 코드 유지)
         const normalize = (v) => v ? v : "미분류";
         const units = Array.from(new Set(jsonData.map(w => normalize(w["구성 단위"]))));
         const types = Array.from(new Set(jsonData.map(w => normalize(w["고유어 여부"]))));
@@ -100,7 +116,8 @@ function App() {
         setLoading(false);
       }
     }
-    fetchWords();
+
+    fetchRandomWord();
   }, []);
 
   const toggleSelection = (value, selectedList, setSelectedList) => {
