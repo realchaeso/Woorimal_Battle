@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Woorimal_Battle/static/css/main.ca2fc644.css",
-    "main.js": "/Woorimal_Battle/static/js/main.7dcb22ec.js",
+    "main.js": "/Woorimal_Battle/static/js/main.c849a8df.js",
     "static/js/453.5c49a2c2.chunk.js": "/Woorimal_Battle/static/js/453.5c49a2c2.chunk.js",
     "index.html": "/Woorimal_Battle/index.html",
     "main.ca2fc644.css.map": "/Woorimal_Battle/static/css/main.ca2fc644.css.map",
-    "main.7dcb22ec.js.map": "/Woorimal_Battle/static/js/main.7dcb22ec.js.map",
+    "main.c849a8df.js.map": "/Woorimal_Battle/static/js/main.c849a8df.js.map",
     "453.5c49a2c2.chunk.js.map": "/Woorimal_Battle/static/js/453.5c49a2c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca2fc644.css",
-    "static/js/main.7dcb22ec.js"
+    "static/js/main.c849a8df.js"
   ]
 }
