@@ -29,7 +29,7 @@ const addHint = (word, currentHint) => {
   const candidates = [];
   for (let i = 0; i < word.length; i++) {
     const code = word[i].charCodeAt(0);
-    if (code >= 0xac00 && code <= 0xd7a3 && currentHint[i] === "_") {
+    if (code >= 0xac00 && code <= 0xd7a3 && currentHint[i] === "□") {
       candidates.push(i);
     }
   }
@@ -40,8 +40,8 @@ const addHint = (word, currentHint) => {
     .map((c, i) => {
       if (i === randIndex) return getChoseong(c);
       if (c === " ") return "⁀";
-      if (currentHint[i] !== "_") return currentHint[i];
-      return "_";
+      if (currentHint[i] !== "□") return currentHint[i];
+      return "□";
     })
     .join("");
 };
@@ -271,7 +271,7 @@ function App() {
         <div className="play-panel">
           <p><strong>문제:</strong> {current.뜻풀이}</p>
           <p className={`hint-text ${hintFlash ? "flash" : ""}`}><strong>힌트:</strong> {hint}</p>
-          <button className="btn-hint" onClick={addHintHandler}>힌트 추가</button>
+          <button className="btn-hint" onClick={addHintHandler}>🔎힌트 추가</button>
           <div className="answer-panel">
             <input value={userAnswer} onChange={e => setUserAnswer(e.target.value)} placeholder="정답 입력" />
             <button className="btn-primary" onClick={checkAnswer}>확인</button>
@@ -287,8 +287,8 @@ function App() {
             </div>
           )}
           <div style={{ marginTop: "15px" }}>
-            <button className="btn-play" onClick={() => generateProblem(mode === "review" ? savedProblems : filteredWords)}>다음 문제</button>
-            {mode === "play" && <button className="btn-save" onClick={saveProblemHandler}>문제 저장</button>}
+            <button className="btn-play" onClick={() => generateProblem(mode === "review" ? savedProblems : filteredWords)}>🔨다음 문제</button>
+            {mode === "play" && <button className="btn-save" onClick={saveProblemHandler}>💾문제 저장</button>}
             {mode === "review" && <button className="btn-delete" onClick={() => {
               const newSaved = savedProblems.filter(p => p.어휘 !== current.어휘);
               setSavedProblems(newSaved);

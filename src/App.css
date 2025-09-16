@@ -32,32 +32,33 @@ button {
   transition: 0.2s;
 }
 
-/* 🔥 버튼 종류별 색상 */
-.btn-primary { background-color: #4f46e5; color: #fff; font-weight: bold; padding: 8px 15px; }
-.btn-primary:hover { background-color: #3730a3; }
+/* 🔥 버튼 종류별 색상 (선명한 파스텔톤) */
+.btn-primary { background-color: #a78bfa; color: #fff; font-weight: bold; padding: 8px 15px; }
+.btn-primary:hover { background-color: #7c3aed; }
 
-.btn-play { background-color: #4f46e5; color: #fff; padding: 8px 15px; font-weight: bold; }
-.btn-play:hover { background-color: #3730a3; }
+.btn-play { background-color: #f9a8d4; color: #fff; padding: 8px 15px; font-weight: bold; }
+.btn-play:hover { background-color: #ec4899; }
 
-.btn-review { background-color: #16a34a; color: #fff; padding: 8px 15px; font-weight: bold; }
-.btn-review:hover { background-color: #15803d; }
+.btn-review { background-color: #6ee7b7; color: #fff; padding: 8px 15px; font-weight: bold; }
+.btn-review:hover { background-color: #34d399; }
 
-.btn-save { background-color: #f59e0b; color: #fff; padding: 8px 15px; font-weight: bold; }
-.btn-save:hover { background-color: #d97706; }
+.btn-save { background-color: #fcd34d; color: #fff; padding: 8px 15px; font-weight: bold; }
+.btn-save:hover { background-color: #fbbf24; }
 
-.btn-delete { background-color: #dc2626; color: #fff; padding: 8px 15px; font-weight: bold; }
-.btn-delete:hover { background-color: #b91c1c; }
+.btn-delete { background-color: #f87171; color: #fff; padding: 8px 15px; font-weight: bold; }
+.btn-delete:hover { background-color: #ef4444; }
 
-.btn-home { background-color: #0ea5e9; color: #fff; padding: 8px 15px; font-weight: bold; }
-.btn-home:hover { background-color: #0369a1; }
+.btn-home { background-color: #60a5fa; color: #fff; padding: 8px 15px; font-weight: bold; }
+.btn-home:hover { background-color: #3b82f6; }
 
 .btn-hint { background: #facc15; font-weight: bold; padding: 8px 15px; }
 .btn-hint:hover { background: #eab308; }
 
-.btn-secondary { background-color: #e0e0e0; color: #333; margin-left: 5px; padding: 3px 8px; font-size: 14px; border-radius: 6px; }
-.btn-secondary:hover { background-color: #c7c7c7; }
+.btn-secondary { background-color: #d9f99d; color: #333; margin-left: 5px; padding: 3px 8px; font-size: 14px; border-radius: 6px; }
+.btn-secondary:hover { background-color: #bef264; }
 
-.btn-primary-small { background-color: #4f46e5; color: #fff; font-size: 14px; padding: 4px 8px; border-radius: 6px; }
+.btn-primary-small { background-color: #a78bfa; color: #fff; font-size: 14px; padding: 4px 8px; border-radius: 6px; }
+
 
 /* 체크박스 */
 .checkbox-label { margin-left: 10px; display: inline-block; }
