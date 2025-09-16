@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+📘 우리말 배틀 (Woorimal Battle)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+우리말 어휘 학습을 재미있게!
+랜덤으로 문제를 출제하고, 힌트를 주고, 직접 풀어볼 수 있는 우리말 퀴즈 앱 🎉
 
-## Available Scripts
+🚀 주요 기능
 
-In the project directory, you can run:
+✅ 랜덤 문제 출제 : 사전 데이터를 기반으로 어휘 퀴즈 생성
 
-### `npm start`
+✅ 힌트 제공 : 초성 힌트 / 띄어쓰기 표시
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✅ 문제 저장 & 복습 모드 : 나만의 문제집 만들기
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✅ 필터링 기능 :
 
-### `npm test`
+📌 구성 단위 선택
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📌 고유어 여부 선택
 
-### `npm run build`
+📌 품사 선택
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+✅ 점수 기록 : 정답률 확인 가능
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🖼️ 화면 미리보기
+홈 화면	문제 풀이	필터 선택
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+	
+	
 
-### `npm run eject`
+(캡처해서 docs/ 폴더에 넣으면 자동으로 표시됨!)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+⚙️ 실행 방법
+1️⃣ 프로젝트 클론
+git clone https://github.com/realchaeso/Woorimal_Battle.git
+cd Woorimal_Battle
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2️⃣ 의존성 설치
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3️⃣ 개발 서버 실행
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4️⃣ 배포 (GitHub Pages)
+npm run build
+npm run deploy
 
-## Learn More
+📂 프로젝트 구조
+Woorimal_Battle/
+├── public/
+│   ├── words_jsons/       # 변환된 JSON 문제 데이터
+│   └── king.jpeg          # 메인 이미지
+├── scripts/
+│   ├── convertExcelToJson.js   # Excel → JSON 변환 스크립트
+│   └── generateFileList.js     # JSON 파일 목록 생성
+├── src/
+│   ├── App.js             # 메인 로직
+│   └── App.css            # 스타일
+└── package.json
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🙌 만든 사람
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+realchaeso 🥬
 
-### Code Splitting
+⭐ 기여 & 라이선스
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+이 프로젝트는 학습 및 개인 프로젝트용으로 제작되었습니다.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+자유롭게 Fork, 수정, 개선 제안 모두 환영합니다!
