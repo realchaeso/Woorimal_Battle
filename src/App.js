@@ -149,7 +149,7 @@ function App() {
     }
     const selected = pool[Math.floor(Math.random() * pool.length)];
     const cleanWord = onlyHangulWithSpace(selected.어휘);
-    const initialHint = cleanWord.split("").map(c => c === " " ? "⁀" : "_").join("");
+    const initialHint = cleanWord.split("").map(c => c === " " ? "⁀" : "□").join("");
 
     setCurrent({ ...selected, 어휘: cleanWord });
     setHint(initialHint);
@@ -214,7 +214,15 @@ function App() {
             복습하기 {loading && "(로딩 중...)"}
           </button>
         </div>
-
+        {/* 🔥 필터 토글 버튼 */}
+        <div style={{ marginBottom: "20px" }}>
+          <button 
+            className="btn-secondary" 
+            onClick={() => setShowFilter(!showFilter)}
+          >
+            {showFilter ? "필터 닫기" : "필터 열기"}
+          </button>
+        </div>
         {showFilter && (
           <div className="filter-panel">
             <div>
